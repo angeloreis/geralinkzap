@@ -1,0 +1,33 @@
+div#resultado {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: -30px;
+}
+
+div#resultado > p.resultado-ok {
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #002915;
+  color: #fff;
+  background: #023d24;
+}
+
+div#resultado > p.resultado-fail {
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #290000;
+  color: #fff;
+  background: #3d0202;
+}
+
+div#resultado > p.resultado-warning {
+  padding: 30px 10px;
+  border-radius: 15px;
+  border: 1px solid #e7f526;
+
+  color: #fdf4f4;
+  background: #cebd04;
+
+  text-shadow: 1px 1px 2px #3d0202;
+}

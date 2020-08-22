@@ -47,7 +47,13 @@
       property="twitter:image"
       content="https://geralinkzap.com.br/assets/seo-metaImage.png"
     />
+    <link
+      rel="shortcut icon"
+      href="assets/img/whatsapp.svg"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body class="bg-primary text-white">
     <header>
@@ -71,8 +77,24 @@
               data-full-width-responsive="true"
             ></ins>
             <ul class="list-inline list-unstyled" style="padding-left: 10px;">
-              <li class="list-inline-item">Sobre</li>
-              <li class="list-inline-item">Contato</li>
+              <li class="list-inline-item">
+                <a
+                  class="btn btn-success"
+                  data-toggle="tooltip"
+                  data-placement="bottom"
+                  title="Oi eu sou o Angelo. Eu criei este recurso para ajudar outras pessoas que tem a mesma dificuldade para gerar de forma mais prática o link personalizado para colocar no site. Espero que facilite a vida de vocês"
+                >
+                  Sobre
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a
+                  href="https://wa.me/5591992664715?text=Oi Angelo. Eu cheguei aqui através do seu site GeraLinkZap.com.br. Tenho algumas perguntas para te fazer sobre essa plataforma!"
+                  target="_blank"
+                  class="btn btn-success"
+                  >Contato</a
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -81,7 +103,7 @@
 
     <div class="container">
       <div class="col-sm-8 border rounded mx-auto m-2 p-5">
-        <form action="gerarlink()" method="get">
+        <form id="geraZap" action="/" method="POST">
           <div class="row">
             <div class="form-group col-12">
               <label for="telefoneNumber">Número do WhatsApp:</label>
@@ -90,7 +112,6 @@
                 class="form-control"
                 name="telefone"
                 type="text"
-                pattern="\(d{2}\)\d{5}-\d{4}"
               />
             </div>
           </div>
@@ -98,9 +119,9 @@
             <div class="form-group col-12 p-3">
               <label for="msgZap">Mensagem que será enviada:</label>
               <input
+                id="msgZap"
                 type="text"
                 name="msgZap"
-                id="msgZap"
                 class="form-control"
               />
             </div>
@@ -112,6 +133,11 @@
               </button>
             </div>
           </div>
+          <div class="row">
+            <div class="form-group col-12">
+              <div id="resultado"></div>
+            </div>
+          </div>
         </form>
       </div>
     </div>
@@ -120,11 +146,7 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.mask.min.js"></script>
-    <script>
-      $document.ready(function () {
-        $("[name=telefone").mask("(00) 00000-0000");
-      });
-    </script>
+    <script src="assets/js/main.js"></script>
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
